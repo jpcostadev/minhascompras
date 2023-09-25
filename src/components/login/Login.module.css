@@ -1,0 +1,16 @@
+.login {
+  display: grid;
+  background: url("../../assets/img/bg.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: calc(100vh - 90px);
+  justify-content: center;
+  align-items: center;
+}
+
+.forms {
+  max-width: 500px;
+  height: 700px;
+  padding: 3rem;
+  background-color: var(--gray-6);
+  border-radius: 10px;
+}

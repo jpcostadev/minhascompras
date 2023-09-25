@@ -1,0 +1,59 @@
+.errorModal {
+  display: grid;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.erro {
+  background: var(--primary);
+  padding: 3rem;
+  border-radius: 10px;
+  color: var(--gray-7);
+  display: flex;
+  flex-direction: column;
+  animation: up 0.3s forwards;
+  max-width: 280px;
+  max-height: 280px;
+}
+.erro h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.erro p {
+  margin-bottom: 1rem;
+}
+
+.btnOk {
+  background: none;
+  border: none;
+  background-color: var(--gray-4);
+  padding: 1rem 1.8rem;
+  color: var(--gray-7);
+  font-weight: 500;
+  font-family: var(--type-first);
+  border-radius: 10px;
+  font-size: 1.6rem;
+  transition: 0.3s;
+}
+.btnOk:hover {
+  background: none;
+  border: none;
+  background-color: var(--gray-3);
+  transform: scale(1.1);
+}
+
+@keyframes up {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

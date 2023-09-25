@@ -1,0 +1,17 @@
+.inputCheck {
+  padding: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.labelcheck {
+  margin-right: 1rem;
+}
+
+input[type="checkbox"] {
+  box-shadow: none;
+  text-align: start;
+  margin-right: 1rem;
+  width: 15px;
+  height: 15px;
+}

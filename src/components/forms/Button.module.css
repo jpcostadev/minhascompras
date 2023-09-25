@@ -1,0 +1,24 @@
+.button {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  border: none;
+  background: var(--gradient-1);
+  color: var(--gray-7);
+  font-weight: 500;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 8rem;
+}
+
+.button:hover,
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ff697d, 0 0 0 3px var(--c-1-dark);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}

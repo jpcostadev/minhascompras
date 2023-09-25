@@ -1,0 +1,39 @@
+.headerBg {
+  background: var(--gray-6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 3px 3px 4px #bbbbbbbe, -3px -3px 4px #ffffff;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  max-width: 120px;
+  padding: 1rem 0;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+}
+
+.login::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("../../assets/img/icons/user.png") no-repeat center center;
+  margin-right: 0.5rem;
+}
+
+.config {
+  max-width: 20px;
+  margin-left: 1rem;
+}

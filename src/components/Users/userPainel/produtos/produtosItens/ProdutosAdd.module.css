@@ -1,0 +1,35 @@
+.btns {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(30px, 1fr)
+  ); /* Mínimo de 30px, flexível */
+  align-items: center;
+  gap: 0.5rem;
+  height: 50px;
+  margin-bottom: 3rem;
+  justify-content: start;
+}
+.section label {
+  color: var(--gray-4);
+}
+
+.btns button {
+  background: var(--gradient-1);
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  width: 100%; /* Garante que todos os botões tenham a mesma largura */
+  text-align: center; /* Centraliza o texto no botão */
+  color: var(--gray-8);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.input {
+  text-align: center;
+}
+
+.form {
+  display: grid;
+}

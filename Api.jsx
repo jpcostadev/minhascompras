@@ -1,5 +1,5 @@
 // URL base da API
-export const API_URL = "https://igrcode.com.br/minhascomprasapi/json";
+export const API_URL = "https://xyzapi.online/apixyzcompras/json";
 
 // Função que gera uma requisição POST para obter um token de autenticação
 export function TOKEN_POST(body) {
@@ -68,22 +68,10 @@ export function LIMIT_GET(token) {
   };
 }
 
-// Função que gera uma requisição POST para criar um novo limite de serviço
-export function LIMIT_POST(body) {
-  return {
-    url: API_URL + "/api/servico",
-    options: {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    },
-  };
-}
-
 // Função que gera uma requisição POST para criar um novo serviço
-export function PRODUTO_POST(body, token) {
+export function PRODUTO_POST(body) {
+  const token = window.localStorage.getItem("token");
+
   return {
     url: API_URL + "/api/produto",
     options: {
@@ -98,7 +86,9 @@ export function PRODUTO_POST(body, token) {
 }
 
 // Função que gera uma requisição GET para buscar informações de serviços
-export function PRODUTO_GET(token, id) {
+export function PRODUTO_GET(id) {
+  const token = window.localStorage.getItem("token");
+
   return {
     url: `${API_URL}/api/produto?usuario_id=${id}`,
     options: {
@@ -109,8 +99,21 @@ export function PRODUTO_GET(token, id) {
     },
   };
 }
+export function PRODUTO_GET_ALL() {
+  const token = window.localStorage.getItem("token");
 
-export function produto_DELETE(id) {
+  return {
+    url: `${API_URL}/api/produtos`,
+    options: {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  };
+}
+
+export function PRODUTO_DELETE(id) {
   return {
     url: `${API_URL}/api/produto/${id}`,
     options: {
@@ -122,20 +125,9 @@ export function produto_DELETE(id) {
   };
 }
 
-export function POST_GET(id) {
+export function PRODUTO_GET_ID(id) {
   return {
     url: `${API_URL}/api/produto?${id}`,
-    options: {
-      method: "GET",
-      cache: "no-store",
-    },
-  };
-}
-
-// Busca as postagens de um usuário específico
-export function produto_GET_ALL(page, total, user) {
-  return {
-    url: `${API_URL}/api/produto?_page=${page}&_total=${total}&_user=${user}`,
     options: {
       method: "GET",
       cache: "no-store",
@@ -154,6 +146,77 @@ export async function BUSCAR_CEP(cep) {
     console.error("Erro ao buscar o CEP:", error);
     return null;
   }
+}
+
+// Função que gera uma requisição POST para criar um novo lista de compras
+export function LISTA_POST(body) {
+  const token = window.localStorage.getItem("token");
+  return {
+    url: API_URL + "/api/lista-compras",
+    options: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+export function LISTA_GET() {
+  const token = window.localStorage.getItem("token");
+
+  return {
+    url: `${API_URL}/api/lista-compras`,
+    options: {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  };
+}
+export function LISTA_DELET(id) {
+  const token = window.localStorage.getItem("token");
+
+  return {
+    url: `${API_URL}/api/lista-compras/${id}`,
+    options: {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  };
+}
+
+export function CATEGORIA_POST(body) {
+  const token = window.localStorage.getItem("token");
+  return {
+    url: API_URL + "/api/categorias",
+    options: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+
+export function CATEGORIA_GET() {
+  const token = window.localStorage.getItem("token");
+
+  return {
+    url: `${API_URL}/api/categorias`,
+    options: {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  };
 }
 
 /*

@@ -1,10 +1,15 @@
 .login {
   display: grid;
-  background: url("../../assets/img/bg.jpg") no-repeat center center;
+  background: url("../img/bg.jpg") no-repeat center center;
   background-size: cover;
   min-height: calc(100vh - 90px);
   justify-content: center;
   align-items: center;
+}
+.loginActive {
+  margin: 0 auto;
+  background: none;
+  background-color: var(--gray-6);
 }
 
 .forms {
@@ -13,4 +18,10 @@
   padding: 3rem;
   background-color: var(--gray-6);
   border-radius: 10px;
+}
+.formsActive {
+  width: 100vw;
+  height: calc(100vh -60px);
+  padding: 3rem;
+  background-color: var(--gray-6);
 }

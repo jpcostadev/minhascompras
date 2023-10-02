@@ -4,11 +4,11 @@
   padding: 0 2rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .Container {
     max-width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 1rem;
     width: 100%;
   }
 }

@@ -1,0 +1,145 @@
+.menu {
+  display: flex;
+  padding: 1rem 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--gray-6);
+  z-index: 1000;
+  align-items: center;
+  height: 60px;
+  justify-content: space-between;
+}
+
+.menu img {
+  max-width: 100px;
+}
+
+.nav {
+  visibility: hidden;
+  pointer-events: none;
+  background: var(--gray-6);
+  width: 0%;
+  min-height: calc(100vh - 60px);
+  position: absolute;
+  z-index: 10000;
+  transition: 0.3s;
+}
+.ul {
+  padding-top: 5rem;
+  display: none;
+}
+.ul li a {
+  padding: 0.5rem;
+}
+.ul li {
+  color: var(--gray-3);
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.ul li a:hover,
+.ul li a:active,
+.ul li a:focus {
+  background: var(--gray-4);
+  color: var(--gray-8);
+  border-radius: 0 10px 10px 0;
+}
+
+.ulActive {
+  display: block;
+  pointer-events: initial;
+  transition: 0.5s;
+  overflow-y: hidden;
+}
+
+.navActive {
+  width: 80vw;
+  visibility: visible;
+  /* box-shadow: 20vw 0px 0px rgba(0, 0, 0, 0.3); */
+  overflow-y: auto;
+}
+
+.ads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--gradient-1);
+  color: var(--gray-8);
+}
+.ads h1 {
+  text-align: center;
+}
+
+.btnMobile {
+  display: flex;
+  max-width: max-content;
+  max-height: 20px;
+  background: none;
+  border: none;
+  align-items: center;
+  padding: 2rem 2rem;
+  gap: 1rem;
+  background: var(--gradient-1);
+  border-radius: 5px;
+  color: var(--gray-8);
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.hamburger {
+  width: 20px;
+  border-top: 3px solid var(--gray-8);
+  display: block;
+  position: relative;
+}
+
+.hamburger::after,
+.hamburger::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: var(--gray-8);
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.hamburgerActive::after {
+  transform: rotate(135deg);
+  top: -8px;
+}
+.hamburgerActive::before {
+  transform: rotate(-135deg);
+}
+.hamburgerActive {
+  border-top-color: transparent;
+}
+
+.dados {
+  display: flex;
+  justify-content: start;
+}
+
+.pro span a {
+  display: flex;
+}
+.pro span img {
+  display: flex;
+  animation: up 0.3s infinite alternate;
+}
+
+.pro span a:hover {
+  background: none;
+  background: var(--gradient-1);
+}
+
+@keyframes up {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}

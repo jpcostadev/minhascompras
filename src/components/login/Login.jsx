@@ -7,17 +7,18 @@ import PasswordReset from "./PasswordReset";
 import PasswordLost from "./PasswordLost";
 import { UserContext } from "../../userContext";
 import Error from "../utils/Error";
+import useMedia from "../../../Hooks/useMedia";
 
 const Login = () => {
   const { login, error } = React.useContext(UserContext);
-
-  if (login === true) return <Navigate to={"/conta"} />;
+  const mobile = useMedia("(max-width: 800px)");
+  if (login === true) return <Navigate to={"/painel"} />;
 
   return (
-    <section className={styles.login}>
+    <section className={`${styles.login}  ${mobile && styles.loginActive} `}>
       {error && <Error error={error} />}
 
-      <div className={styles.forms}>
+      <div className={`${styles.forms}  ${mobile && styles.formsActive} `}>
         <Routes>
           <Route path="/" element={<LoginForm />} />
           <Route path="criar" element={<LoginCreate />} />

@@ -1,0 +1,54 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  background: var(--gray-6);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px #c9c5c5, -3px -3px 8px #ffffff;
+  align-items: start;
+}
+
+.btns {
+  display: grid;
+  padding: 1rem;
+  border-radius: 5px;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  grid-column: 1/-1;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 3px 3px 8px #5a5a5a, -3px -3px 8px #ffffff;
+}
+
+.Button {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  border: none;
+  background: var(--gray-8);
+  color: var(--gray-3);
+  font-weight: 500;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 8rem;
+  width: 100%;
+  box-shadow: 3px 3px 8px #5a5a5a, -3px -3px 8px #ffffff;
+}
+.activeButton {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  border: none;
+  background: var(--gradient-1);
+  color: var(--gray-7);
+  font-weight: 500;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 8rem;
+  box-shadow: 1px 1px 2px #5a5a5a, -1px -1px 2px #ffffff;
+}

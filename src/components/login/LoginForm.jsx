@@ -6,10 +6,12 @@ import Container from "../global/Container";
 import Button from "../forms/Button";
 import useForm from "../../../Hooks/useForm";
 import { UserContext } from "../../userContext";
-import logo from "../../assets/img/logo.png";
+import logo from "../img/logo.png";
+import useMedia from "../../../Hooks/useMedia";
 
 const LoginForm = () => {
   const { userLogin, error, loading } = React.useContext(UserContext);
+  const mobile = useMedia("(max-width: 800px)");
 
   const username = useForm("");
   const password = useForm("");

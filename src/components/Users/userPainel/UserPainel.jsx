@@ -1,7 +1,11 @@
 import React from "react";
-
+import Painel from "./Painel";
 const UserPainel = () => {
-  return <div>UserPainel</div>;
+  return (
+    <section>
+      <Painel />
+    </section>
+  );
 };
 
 export default UserPainel;
